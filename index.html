@@ -3,239 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vanishree | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    /* Embedded CSS */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body, html {
-      height: 100%;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #e0eafc, #cfdef3);
-      color: #222;
-    }
-
-    .background-overlay {
-      backdrop-filter: blur(6px);
-    }
-
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      color: #fff;
-    }
-
-    .subtitle {
-      font-weight: 300;
-      color: #f5f5f5;
-      margin-bottom: 10px;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem 0;
-    }
-
-    header {
-      background: rgba(0, 77, 64, 0.9);
-      padding: 2rem 0;
-      text-align: center;
-      border-bottom: 4px solid #26a69a;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 1rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #cde8e5;
-      font-weight: 500;
-      transition: 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #ffffff;
-    }
-
-    section h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #004d40;
-    }
-
-    section p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-    }
-
-    .project {
-      background: #ffffff;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    input, textarea {
-      padding: 0.9rem;
-      border: 1px solid #bbb;
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-
-    button {
-      background: #004d40;
-      color: white;
-      border: none;
-      padding: 0.9rem;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: 0.3s ease;
-    }
-
-    button:hover {
-      background: #00796b;
-    }
-
-    #formMessage {
-      transition: opacity 0.5s ease;
-      font-weight: 500;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      background: #004d40;
-      color: #fff;
-      margin-top: 2rem;
-    }
-
-    @media (max-width: 600px) {
-      nav ul {
-        flex-direction: column;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      section h2 {
-        font-size: 1.6rem;
-      }
-    }
-  </style>
+  <title>Your Premium Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="background-overlay">
-    <header>
-      <div class="container">
-        <h1>Vanishree</h1>
-        <p class="subtitle">Full-Stack Java Developer</p>
-        <nav>
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+
+  <nav class="navbar">
+    <div class="logo">Vanishree</div>
+    <ul class="nav-menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hi, I'm <span>Vanishree</span></h1>
+      <p>Creative Developer | Full Stack Web Developer | Problem Solver <strong>HTML, CSS & JavaScript</strong>.</p>
+      <button class="btn" onclick="scrollToSection('projects')">Explore Projects</button>
+    </div>
+  </section>
+
+  <section id="about" class="section fade-in">
+    <h2>About Me</h2>
+    <p>I’m a web developer focused on building responsive, elegant interfaces with smooth animations and great UX.</p>
+  </section>
+
+  <section id="skills" class="section fade-in">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-box"><i class="fab fa-html5"></i><p>HTML5</p></div>
+      <div class="skill-box"><i class="fab fa-css3-alt"></i><p>CSS3</p></div>
+      <div class="skill-box"><i class="fab fa-js-square"></i><p>JavaScript</p></div>
+      <div class="skill-box"><i class="fab fa-react"></i><p>React</p></div>
+    </div>
+  </section>
+
+  <section id="projects" class="section fade-in">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Canteen Automation System</h3>
+        <p>A Canteen System Automation simplifies and speed ordering.</p>
       </div>
-    </header>
-
-    <section id="about" class="container">
-      <h2>About Me</h2>
-      <p>
-        I'm an MCA graduate specializing in full-stack Java development. I'm currently building a Spring Boot + Angular e-commerce platform using AWS.
-      </p>
-    </section>
-
-    <section id="projects" class="container">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>Organic Biomass Cosmetics E-Commerce</h3>
-        <p>
-          A full-stack web app for selling natural cosmetic products. Built with Spring Boot, Angular, and AWS. Includes admin dashboard, cart, and order system.
-        </p>
+      <div class="project-card">
+        <h3>AI-Crop Recomender</h3>
+        <p>It was enhaced system was AI farmers about analysis</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="contact" class="container">
-      <h2>Contact Me</h2>
-      <form id="contactForm">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-      <p id="formMessage"></p>
-    </section>
+  <section id="contact" class="section fade-in">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
 
-    <footer>
-      <p>&copy; 2025 Vanishree . All rights reserved.</p>
-    </footer>
-  </div>
+  <footer>
+    <p>&copy; 2025 Vanishree. All Rights Reserved.</p>
+  </footer>
 
-  <script>
-    // Embedded JavaScript
-    const form = document.getElementById('contactForm');
-    const formMessage = document.getElementById('formMessage');
-    const button = form.querySelector('button');
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      const name = form.elements[0].value.trim();
-      const email = form.elements[1].value.trim();
-      const message = form.elements[2].value.trim();
-
-      if (!name || !email || !message) {
-        showMessage("Please fill in all fields.", "error");
-        return;
-      }
-
-      button.disabled = true;
-      button.innerHTML = "Sending...";
-
-      setTimeout(() => {
-        form.reset();
-        button.disabled = false;
-        button.innerHTML = "Send Message";
-        showMessage("Thank you for your message!", "success");
-      }, 1500);
-    });
-
-    function showMessage(text, type) {
-      formMessage.textContent = text;
-      formMessage.style.color = type === "success" ? "#2e7d32" : "#c62828";
-      formMessage.style.marginTop = "1rem";
-      formMessage.style.opacity = 0;
-
-      let opacity = 0;
-      const fade = setInterval(() => {
-        opacity += 0.05;
-        formMessage.style.opacity = opacity;
-        if (opacity >= 1) clearInterval(fade);
-      }, 30);
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
